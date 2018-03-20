@@ -8,6 +8,9 @@ const BookTag = () => import('../components/book/BookTag.vue')
 const BookTagContent = () => import('../components/book/BookTagContent.vue')
 const BookTagMoreContent = () => import('../components/book/BookTagMoreContent.vue')
 const BookTypeContent = () => import('../components/book/BookTypeContent.vue')
+const MovieTimeTypeContent = () => import('../components/movie/MovieTimeTypeContent.vue')
+const MovieTag = () => import('../components/movie/MovieTag.vue')
+const MovieTagContent = () => import('../components/movie/MovieTagContent.vue')
 
 export default new Router({
   routes: [{
@@ -35,6 +38,21 @@ export default new Router({
     components: {
       default: BaseHeader,
       content: BookTypeContent
+    }
+  }, {
+    path: '/movie-show-time',
+    name: 'movieShowTime',
+    components: {
+      default: BaseHeader,
+      content: MovieTimeTypeContent
+    }
+  }, {
+    path: '/movie-tag',
+    name: 'movieTag',
+    components: {
+      default: BaseHeader,
+      aside: MovieTag,
+      content: MovieTagContent
     }
   }
   ]
