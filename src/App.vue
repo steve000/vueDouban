@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
+    <div class="main-content">
+        <router-view name="content"/>
+        <router-view name="aside"/>
+    </div>
   </div>
 </template>
 
@@ -12,12 +15,16 @@ export default {
 </script>
 
 <style>
+@import './css/style.css';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.main-content {
+  width: 936px;
+  margin: 0 auto;
 }
 </style>
