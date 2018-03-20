@@ -11,11 +11,11 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            'api': {
-                target: 'https://api.douban.com',
+            '/api': {
+                target: 'https://api.douban.com/v2',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/api': '/v2'
+                    '^/api': ''
                 }
             }
         },
@@ -23,7 +23,7 @@ module.exports = {
         // Various Dev Server settings
         host: 'localhost', // can be overwritten by process.env.HOST
         port: 8000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-        autoOpenBrowser: false,
+        autoOpenBrowser: true,
         errorOverlay: true,
         notifyOnErrors: true,
         poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
