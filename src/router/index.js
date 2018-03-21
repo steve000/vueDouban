@@ -20,62 +20,63 @@ const CityTag = () => import('../components/city/CityTag.vue')
 const CityTagContent = () => import('../components/city/CityTagContent.vue')
 
 export default new Router({
-  routes: [{
-    path: '/',
-    redirect: '/book-tag'
-  }, {
-    path: '/book-tag',
-    name: 'bookTag',
-    components: {
-      default: BaseHeader,
-      aside: BookTag,
-      content: BookTagContent
+  routes: [
+    {
+      path: '/',
+      redirect: '/book-tag'
+    }, {
+      path: '/book-tag',
+      name: 'bookTag',
+      components: {
+        default: BaseHeader,
+        aside: BookTag,
+        content: BookTagContent
+      }
+    }, {
+      path: '/book-tag-more-info',
+      name: 'bookTagMoreInfo',
+      components: {
+        default: BaseHeader,
+        aside: BookTag,
+        content: BookTagMoreContent
+      }
+    }, {
+      path: '/book-type',
+      name: 'bookType',
+      components: {
+        default: BaseHeader,
+        content: BookTypeContent
+      }
+    }, {
+      path: '/movie-show-time',
+      name: 'movieShowTime',
+      components: {
+        default: BaseHeader,
+        content: MovieTimeTypeContent
+      }
+    }, {
+      path: '/movie-tag',
+      name: 'movieTag',
+      components: {
+        default: BaseHeader,
+        aside: MovieTag,
+        content: MovieTagContent
+      }
+    }, {
+      path: '/music-tag',
+      name: 'musicTag',
+      components: {
+        default: BaseHeader,
+        content: MusicTagContent
+      }
+    }, {
+      path: '/city-tag',
+      name: 'cityTag',
+      components: {
+        default: BaseHeader,
+        aside: CityTag,
+        content: CityTagContent
+      }
     }
-  }, {
-    path: '/book-tag-more-info',
-    name: 'bookTagMoreInfo',
-    components: {
-      default: BaseHeader,
-      aside: BookTag,
-      content: BookTagMoreContent
-    }
-  }, {
-    path: '/book-type',
-    name: 'bookType',
-    components: {
-      default: BaseHeader,
-      content: BookTypeContent
-    }
-  }, {
-    path: '/movie-show-time',
-    name: 'movieShowTime',
-    components: {
-      default: BaseHeader,
-      content: MovieTimeTypeContent
-    }
-  }, {
-    path: '/movie-tag',
-    name: 'movieTag',
-    components: {
-      default: BaseHeader,
-      aside: MovieTag,
-      content: MovieTagContent
-    }
-  }, {
-    path: '/music-tag',
-    name: 'musicTag',
-    components: {
-      default: BaseHeader,
-      content: MusicTagContent
-    }
-  }, {
-    path: '/city-tag',
-    name: 'cityTag',
-    components: {
-      default: BaseHeader,
-      aside: CityTag,
-      content: CityTagContent
-    }
-  }
   ]
 })

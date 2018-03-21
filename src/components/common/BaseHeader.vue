@@ -114,6 +114,7 @@ export default {
   beforeRouteLeave (to, from, next) {
     this.keyword = ''
     this.$store.commit('SET_SEARCH_DATA', [])
+    console.log(to)
     this.onHashChange(to.name)
     next()
   },
@@ -152,7 +153,7 @@ export default {
     keyword (newValue) {
       // 监听搜索框内文字的变化，根据搜索内容发送搜索请求
       // 设置延时，若用户在200ms内输入不同关键字搜索，会合并成一次请求，以最后一次为准
-      if (newValue !== '' && this.currentModuleType.value !== 'city') {
+      if (newValue !== '' && this.currentModuleType.value !== 'city-tag') {
         if (this.timer) {
           clearTimeout(this.timer)
         }
