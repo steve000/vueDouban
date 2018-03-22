@@ -23,7 +23,7 @@ const mutations = {
 }
 
 const actions = {
-  getCurrentTagMusics ({commit, state}, {count = 10, start = 0}) {
+  getCurrentTagMusics ({ commit, state }, { count = 10, start = 0 }) {
     axios.get('/api/music/search', {
       params: {
         tag: state.currentMusicTag,

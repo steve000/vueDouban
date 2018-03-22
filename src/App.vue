@@ -2,8 +2,8 @@
   <div id="app">
     <router-view/>
     <div class="main-content">
-        <router-view name="content"/>
-        <router-view name="aside"/>
+      <router-view name="content"/>
+      <router-view name="aside"/>
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
   color: #2c3e50;
   font-size: 13px;
 }
-.main-content {
+.main-content{
   width: 936px;
   margin: 0 auto;
 }

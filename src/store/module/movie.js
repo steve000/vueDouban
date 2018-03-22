@@ -2,8 +2,8 @@ import axios from 'axios'
 import * as types from '../mutation-types'
 
 const movieTimeTypes = [
-  {value: 'in_theaters', text: '正在热映'},
-  {value: 'coming_soon', text: '即将上映'}
+  { value: 'in_theaters', text: '正在热映' },
+  { value: 'coming_soon', text: '即将上映' }
 ]
 
 const movieTags = ['热门', '最新', '经典', '华语', '欧美', '韩国', '日本', '动作', '喜剧', '爱情', '科幻', '悬疑', '恐怖', '动画', '可播放', '豆瓣高分', '冷门佳片']
@@ -41,7 +41,7 @@ const mutations = {
 }
 
 const actions = {
-  getTimeTypeMovies ({commit}, {start = 0, count = 10, searchParams = 'in_theaters'}) {
+  getTimeTypeMovies ({ commit }, { start = 0, count = 10, searchParams = 'in_theaters' }) {
     axios.get(`/api/movie/${searchParams}`, {
       params: {
         start,
@@ -53,7 +53,7 @@ const actions = {
         commit(types.SET_CURRENT_TIME_TYPE_MOVIES, response.data.subjects)
       })
   },
-  getCurrentTagMovies ({commit, state}, {start = 0, count = 10}) {
+  getCurrentTagMovies ({ commit, state }, { start = 0, count = 10 }) {
     axios.get('/api/movie/search', {
       params: {
         start,

@@ -10,7 +10,7 @@
 <script>
 import CityActivityContentItem from './CityActivityContentItem.vue'
 export default {
-  name: 'CityTagContent',
+  name: 'CityActivityContent',
   components: {
     CityActivityContentItem
   },

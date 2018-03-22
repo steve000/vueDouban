@@ -1,4 +1,3 @@
-// 公共JS方法
 export default {
   // 将单个数组切割成多个数组
   // 参数：array:需做处理的数组；length:切割后数组的长度

@@ -66,7 +66,7 @@ const moduleTypes = [
     backgroundColor: '#f6f5f2',
     subTypes: [{
       text: '按城市分类',
-      path: 'city-tag'
+      path: 'city'
     }]
   }
 ]

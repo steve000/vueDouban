@@ -2,22 +2,22 @@ import axios from 'axios'
 import * as types from '../mutation-types'
 
 const activityTypes = [
-  {value: 'music', text: '音乐'},
-  {value: 'drama', text: '戏剧'},
-  {value: 'exhibition', text: '展览'},
-  {value: 'salon', text: '讲座'},
-  {value: 'party', text: '聚会'},
-  {value: 'sports', text: '运动'},
-  {value: 'travel', text: '旅行'},
-  {value: 'commonweal', text: '公益'},
-  {value: 'film', text: '电影'}
+  { value: 'music', text: '音乐' },
+  { value: 'drama', text: '戏剧' },
+  { value: 'exhibition', text: '展览' },
+  { value: 'salon', text: '讲座' },
+  { value: 'party', text: '聚会' },
+  { value: 'sports', text: '运动' },
+  { value: 'travel', text: '旅行' },
+  { value: 'commonweal', text: '公益' },
+  { value: 'film', text: '电影' }
 ]
 
 const dayTypes = [
-  {value: 'today', text: '今天'},
-  {value: 'tomorrow', text: '明天'},
-  {value: 'weekend', text: '周末'},
-  {value: 'week', text: '最近一周'}
+  { value: 'today', text: '今天' },
+  { value: 'tomorrow', text: '明天' },
+  { value: 'weekend', text: '周末' },
+  { value: 'week', text: '最近一周' }
 ]
 
 const state = {
@@ -37,7 +37,7 @@ const mutations = {
 }
 
 const actions = {
-  getCities ({commit}, {start = 0, count = 20}) {
+  getCities ({ commit }, { start = 0, count = 20 }) {
     axios.get('./api/loc/list', {
       params: {
         start,
